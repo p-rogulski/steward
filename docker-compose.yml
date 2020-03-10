@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+  api:
+    container_name: api
+    build:
+      context: ./api
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    networks:
+      - steward-net
+  mysql:
+    container_name: db
+    build:
+      context: ./mysql
+    volumes:
+      - ./data/mysql/:/var/lib/mysql
+    expose:
+      - "3306"
+    networks:
+      - steward-net
+networks:
+  steward-net:
+    driver: bridge
+      

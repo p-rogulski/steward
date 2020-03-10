@@ -1,0 +1,19 @@
+
+FROM mysql:latest
+
+ADD db.cnf /etc/mysql/conf.d/db.cnf
+
+RUN chown -R mysql:root /var/lib/mysql/
+#Fake data for dev purposes
+ARG MYSQL_DATABASE=steward_db
+ARG MYSQL_USER=admin
+ARG MYSQL_PASSWORD=admin
+ARG MYSQL_ROOT_PASSWORD=root
+
+ENV MYSQL_DATABASE=$MYSQL_DATABASE
+ENV MYSQL_USER=$MYSQL_USER
+ENV MYSQL_PASSWORD=$MYSQL_PASSWORD
+ENV MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
+
+CMD ["mysqld"]
+EXPOSE 3306
