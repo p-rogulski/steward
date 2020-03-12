@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node ./dist",
-    "dev:server":"node_modules/.bin/webpack-dev-server",
+    "start": "nodemon ./dist",
+    "dev:server": "node_modules/.bin/webpack-dev-server",
     "webpack": "webpack --config webpack.config.ts"
   },
   "keywords": [],
   "author": "Piotr Rogulski",
   "license": "ISC",
   "dependencies": {
+    "@types/amqplib": "^0.5.13",
+    "amqplib": "^0.5.5",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -22,6 +24,7 @@
     "@types/express": "^4.17.3",
     "@types/helmet": "0.0.45",
     "@types/node": "^13.9.0",
+    "nodemon": "^2.0.2",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.2",
     "ts-node-dev": "^1.0.0-pre.44",
