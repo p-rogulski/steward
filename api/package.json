@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "start": "node ./dist",
+    "dev:server":"node_modules/.bin/webpack-dev-server",
     "webpack": "webpack --config webpack.config.ts"
   },
   "keywords": [],
@@ -27,6 +28,7 @@
     "typescript": "^3.8.3",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
     "webpack-node-externals": "^1.7.2"
   }
 }
