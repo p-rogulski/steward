@@ -1,4 +1,4 @@
-version: '3.5'
+version: "3.2"
 
 services:
   nginx:
@@ -11,6 +11,9 @@ services:
         - "80"
   api:
     container_name: api
+    volumes:
+      - ./api:/usr/src/app:rw
+      - ./api/node_modules:/usr/src/app/node_modules
     build:
       context: ./api
     depends_on:
