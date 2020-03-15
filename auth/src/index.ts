@@ -1,5 +1,5 @@
 import express = require('express');
-import amqplib=require('amqplib/callback_api')
+
 // Create a new express application instance
 const app: express.Application = express();
 
@@ -9,16 +9,7 @@ app.get('/', function (req, res) {
 
 const server=app.listen(4921, function () {
   console.log('Example app listening on porst 4921!');
-  var connection = amqplib.connect('amqp://admin:admin@rabbitmq:5672',function(err,conn){
-
-    conn.createChannel(function(error1, channel) {
-      channel.publish('logs', '', Buffer.from('Hello World!'));
-    });
-    
 });
-});
-
-
 
 /**
  * Webpack HMR Activation

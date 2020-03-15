@@ -1,18 +1,15 @@
+FROM oraclelinux:7-slim
+ENV PACKAGE_URL https://repo.mysql.com/yum/mysql-8.0-community/docker/x86_64/mysql-community-server-minimal-8.0.2-0.1.dmr.el7.x86_64.rpm
 
-FROM mysql:latest
+# Install server
+RUN rpmkeys --import http://repo.mysql.com/RPM-GPG-KEY-mysql \
+  && yum install -y $PACKAGE_URL \
+  && yum install -y libpwquality \
+  && rm -rf /var/cache/yum/*
+RUN mkdir /docker-entrypoint-initdb.d
 
-ADD db.cnf /etc/mysql/conf.d/db.cnf
+VOLUME /var/lib/mysql
 
-RUN chown -R mysql:root /var/lib/mysql/
-#Fake data for dev purposes
-ARG MYSQL_DATABASE=steward_db
-ARG MYSQL_USER=admin
-ARG MYSQL_PASSWORD=admin
-ARG MYSQL_ROOT_PASSWORD=root
-
-ENV MYSQL_DATABASE=$MYSQL_DATABASE
-ENV MYSQL_USER=$MYSQL_USER
-ENV MYSQL_PASSWORD=$MYSQL_PASSWORD
-ENV MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
-
+COPY docker-entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["mysqld"]

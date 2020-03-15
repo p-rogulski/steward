@@ -1,4 +1,4 @@
-FROM rabbitmq
+FROM rabbitmq:management
 RUN rabbitmq-plugins enable --offline rabbitmq_management
 ARG RABBITMQ_DEFAULT_USER=admin
 ARG RABBITMQ_DEFAULT_PASS=admin
