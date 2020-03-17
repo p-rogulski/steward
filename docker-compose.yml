@@ -10,7 +10,7 @@ services:
         - "80:80"
         - "443:443"
     expose:
-        - "8080"
+        - "80"
         - "443"
     networks:
       steward_net:
