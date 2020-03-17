@@ -1,0 +1,17 @@
+<nav class="menu menu--primary">
+    <fa-icon class="menu__icon" [icon]="faBars" (click)="toggleDropDownMenu()"></fa-icon>
+    <ul class="menu__items menu__items--primary" #menuItems>
+        <li class="menu__item">
+            <a class="menu__anchor" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__anchor" routerLink="/user-settings" routerLinkActive="active">Ustawienia</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__anchor" routerLink="/login" routerLinkActive="active">Zaloguj się</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__anchor" routerLink="/registration" routerLinkActive="active">Zarejestruj się</a>
+        </li>
+    </ul>
+</nav>
