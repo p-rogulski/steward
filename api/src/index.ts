@@ -9,13 +9,13 @@ app.get('/', function (req, res) {
 
 const server=app.listen(4921, function () {
   console.log('Example app listening on porst 4921!');
-  var connection = amqplib.connect('amqp://admin:admin@rabbitmq:5672',function(err,conn){
+//   var connection = amqplib.connect('amqp://admin:admin@rabbitmq:5672',function(err,conn){
 
-    conn.createChannel(function(error1, channel) {
-      channel.publish('logs', '', Buffer.from('Hello World!'));
-    });
+//     conn.createChannel(function(error1, channel) {
+//       channel.publish('logs', '', Buffer.from('Hello my World!'));
+//     });
     
-});
+// });
 });
 
 
