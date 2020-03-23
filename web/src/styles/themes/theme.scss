@@ -1,0 +1,14 @@
+@import './_hacker-theme';
+@import './_light-theme';
+
+$hacker:'hacker-theme';
+$light:'light-theme';
+
+@mixin theme($name) {
+    @if($name==$hacker) {
+        @include hackerTheme();
+    }
+    @else if($name==$light) {
+        @include hackerTheme();
+    }
+}

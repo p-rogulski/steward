@@ -32,23 +32,23 @@ services:
     networks:
       steward_net:
         ipv4_address: 172.28.1.2
-  web:
-    container_name: web
-    build:
-      context: ./web
-    volumes:
-      - ./web:/usr/src/app
-      - ./web/node_modules:/usr/src/app/node_modules
-    depends_on:
-      - api
-      - nginx
-    ports:
-      - "4200:4200"
-    expose:
-      - "4200"
-    networks:
-      steward_net:
-        ipv4_address: 172.28.1.3
+  # web:
+  #   container_name: web
+  #   build:
+  #     context: ./web
+  #   volumes:
+  #     - ./web:/usr/src/app
+  #     - ./web/node_modules:/usr/src/app/node_modules
+  #   depends_on:
+  #     - api
+  #     - nginx
+  #   ports:
+  #     - "4200:4200"
+  #   expose:
+  #     - "4200"
+  #   networks:
+  #     steward_net:
+  #       ipv4_address: 172.28.1.3
   mysql:
     container_name: mysql
     build: 
