@@ -1,7 +1,12 @@
+@import 'assets/css/font-face.scss';
+
 html,
 body {
-    padding: 0;
-    margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  font-family: 'Roboto, san-serife';
+  font-size: 10px;
+  background-size: cover;
 }

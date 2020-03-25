@@ -1,0 +1,33 @@
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+
+  .header {
+    background-color: #360099;
+    margin: auto;
+
+    .header__container-center {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1366px;
+      margin: auto;
+
+      .header__logo {
+        width: 33px;
+        height: 33px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .content {
+    min-height: 100vh;
+    padding:2rem;
+    text-align: justify;
+    margin: auto;
+    max-width: 1366px;
+  }
+}

@@ -1,0 +1,39 @@
+.footer {
+  box-sizing:border-box;
+  width: 100%;
+  padding:2rem;
+  text-align: center;
+  background-color: #180a75;
+
+  .footer__powered-by {
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+
+  .footer__brand-group {
+    display: flex;
+    justify-content: center;
+
+    .footer__brand {
+      display: flex;
+      padding: 8px 18px 8px 18px;
+      flex-flow: column;
+      color: #ffffff;
+
+      .footer__icon {
+        color: #ffffff;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .footer__copyright {
+    color: #ffffff;
+    font-size: 1.3rem;
+
+    .footer__anchor {
+      color: inherit;
+    }
+  }
+
+}

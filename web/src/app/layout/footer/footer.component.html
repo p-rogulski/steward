@@ -1,1 +1,19 @@
-<p>footer works!</p>
+<div class="footer">
+    <p class="footer__powered-by">
+        Powered by:
+    </p>
+    <div class="footer__brand-group">
+        <p class="footer__brand">
+            <fa-icon class="footer__icon" [icon]="git"></fa-icon>
+        </p>
+        <p class="footer__brand">
+            <fa-icon class="footer__icon" [icon]="twitter"></fa-icon>
+        </p>
+        <p class="footer__brand">
+            <fa-icon class="footer__icon" [icon]="docker"></fa-icon>
+        </p>
+    </div>
+    <p class="footer__copyright">
+        &copy; {{currentYear}} <a href="mailto:piotr.rgl@gmail.com" class="footer__anchor">Piotr Rogulski </a>
+    </p>
+</div>

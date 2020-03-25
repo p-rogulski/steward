@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card__header" #cardHeader>
+        <img [src]="icon" class="card__icon" />
+        <h1 class="card__h1">{{title}}</h1>
+    </div>
+
+    <div class="card__content">
+        <article>
+            <ng-content></ng-content>
+        </article>
+        <div class="card__actions">
+            <button>More Details</button>
+        </div>
+    </div>
+</div>

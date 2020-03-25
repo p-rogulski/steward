@@ -1,0 +1,17 @@
+.homepage {
+  margin-top: 10px;
+  justify-content: space-around;
+
+  &__article {
+    &--nth2{
+        display: flex;
+        flex-flow: column;
+    }
+  }
+
+  &__plugins {
+      display:flex;
+      justify-content: space-around;
+      flex-flow: row wrap;
+  }
+}

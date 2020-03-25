@@ -1,0 +1,19 @@
+<nav class="nav">
+
+    <fa-icon class="nav__icon nav__icon--menu" [icon]="bars" (click)="toggleDropDown()"></fa-icon>
+
+    <ul class="nav__items" #navItems>
+        <li class="nav__item">
+            <a class="nav__anchor" routerLink="/login" routerLinkActive="active">
+                <fa-icon class="nav__icon" [icon]="signInAlt"></fa-icon>
+                <span class="nav__text">Sign In</span>
+            </a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__anchor" routerLink="/registration" routerLinkActive="active">
+                <fa-icon class="nav__icon" [icon]="userPlus"></fa-icon>
+                <span class="nav__text">Sign Up</span>
+            </a>
+        </li>
+    </ul>
+</nav>
