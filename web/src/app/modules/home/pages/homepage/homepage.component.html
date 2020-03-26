@@ -1,66 +1,57 @@
 <div class="homepage">
     <article class="homepage__article homepage__article--nth1">
         <header class="homepage__header">
-            <h1>What Does the Steward Do?</h1>
+            <h1>What does the Steward is?</h1>
         </header>
         <p>
-            Ogólnie znana teza głosi, iż użytkownika może rozpraszać zrozumiała zawartość strony, kiedy ten chce
-            zobaczyć
-            sam jej wygląd. Jedną z mocnych stron używania Lorem Ipsum jest to, że ma wiele różnych „kombinacji” zdań,
-            słów
-            i akapitów, w przeciwieństwie do zwykłego: „tekst, tekst, tekst”, sprawiającego, że wygląda to „zbyt
-            czytelnie”
-            po polsku. Wielu webmasterów i designerów używa Lorem Ipsum jako domyślnego modelu tekstu i wpisanie w
-            internetowej wyszukiwarce ‘lorem ipsum’ spowoduje znalezienie bardzo wielu stron, które wciąż są w budowie.
-            Wiele wersji tekstu ewoluowało i zmieniało się przez lata, czasem przez przypadek, czasem specjalnie
-            (humorystyczne wstawki itd).
+            Steward is an application which the main goal is a manage of customizable dashboard.
+            Customizable dashboard is a collection of plugins.
+            In fact a plugin-in is a separated application created in any framework or library and represents own unit of works.
+            Unit of works in "Steward" nomenclature represents one instance of application.
+            All does plugins together create a unique ecosystem where any one plug-in can talk to another based on event
+            bus architecture placed in the application core.
+            More information about plugins you can find in the plug-in card below.
         </p>
-
     </article>
+    <section class="homepage__section-get">
+        <button class="homepage__button">Get Steward Now</button>
+    </section>
+  
 
-    <article class="homepage__article homepage__article--nth2">
-        <header class="homepage__header">
-            <h1>What Does the Steward Do?</h1>
-        </header>
-        <section class="homepage__plugins">
-            <app-card class="homepage__card" color="#004399" title="Plug-in Architecture" [icon]="plug">
-                Ogólnie znana teza głosi, iż użytkownika może rozpraszać zrozumiała zawartość strony, kiedy ten chce
-                zobaczyć sam jej wygląd. Jedną z mocnych stron używania Lorem Ipsum jest to, że ma wiele różnych
-                „kombinacji” zdań, słów i akapitów, w przeciwieństwie do zwykłego: „tekst, tekst, tekst”, sprawiającego,
-                że wygląda to „zbyt czytelnie” po polsku. Wielu webmasterów i designerów używa Lorem Ipsum jako
-                domyślnego modelu tekstu i wpisanie w internetowej wyszukiwarce ‘lorem ipsum’ spowoduje znalezienie
-                bardzo wielu stron, które wciąż są w budowie. Wiele wersji tekstu ewoluowało i zmieniało się przez lata,
-                czasem przez przypadek, czasem specjalnie (humorystyczne wstawki itd).
-            </app-card>
-            <app-card class="homepage__card" color="#a12d00" [icon]="books" title="Doc">
-                Ogólnie znana teza głosi, iż użytkownika może rozpraszać zrozumiała zawartość strony, kiedy ten chce
-                zobaczyć sam jej wygląd. Jedną z mocnych stron używania Lorem Ipsum jest to, że ma wiele różnych
-                „kombinacji” zdań, słów i akapitów, w przeciwieństwie do zwykłego: „tekst, tekst, tekst”, sprawiającego,
-                że wygląda to „zbyt czytelnie” po polsku. Wielu webmasterów i designerów używa Lorem Ipsum jako
-                domyślnego modelu tekstu i wpisanie w internetowej wyszukiwarce ‘lorem ipsum’ spowoduje znalezienie
-                bardzo wielu stron, które wciąż są w budowie. Wiele wersji tekstu ewoluowało i zmieniało się przez lata,
-                czasem przez przypadek, czasem specjalnie (humorystyczne wstawki itd).
-            </app-card>
-            <app-card class="homepage__card" color="#ff0000" [icon]="compare" title="Changelog">
-                Ogólnie znana teza głosi, iż użytkownika może rozpraszać zrozumiała zawartość strony, kiedy ten chce
-                zobaczyć sam jej wygląd. Jedną z mocnych stron używania Lorem Ipsum jest to, że ma wiele różnych
-                „kombinacji” zdań, słów i akapitów, w przeciwieństwie do zwykłego: „tekst, tekst, tekst”, sprawiającego,
-                że wygląda to „zbyt czytelnie” po polsku. Wielu webmasterów i designerów używa Lorem Ipsum jako
-                domyślnego modelu tekstu i wpisanie w internetowej wyszukiwarce ‘lorem ipsum’ spowoduje znalezienie
-                bardzo wielu stron, które wciąż są w budowie. Wiele wersji tekstu ewoluowało i zmieniało się przez lata,
-                czasem przez przypadek, czasem specjalnie (humorystyczne wstawki itd).
-            </app-card>
-            <app-card class="homepage__card" color="#a6e600" [icon]="cake" title="Become a Baker">
-                Ogólnie znana teza głosi, iż użytkownika może rozpraszać zrozumiała zawartość strony, kiedy ten chce
-                zobaczyć sam jej wygląd. Jedną z mocnych stron używania Lorem Ipsum jest to, że ma wiele różnych
-                „kombinacji” zdań, słów i akapitów, w przeciwieństwie do zwykłego: „tekst, tekst, tekst”, sprawiającego,
-                że wygląda to „zbyt czytelnie” po polsku. Wielu webmasterów i designerów używa Lorem Ipsum jako
-                domyślnego modelu tekstu i wpisanie w internetowej wyszukiwarce ‘lorem ipsum’ spowoduje znalezienie
-                bardzo wielu stron, które wciąż są w budowie. Wiele wersji tekstu ewoluowało i zmieniało się przez lata,
-                czasem przez przypadek, czasem specjalnie (humorystyczne wstawki itd).
-            </app-card>
-        </section>
-    </article>
+    <section class="homepage__plugins">
+        <app-card class="homepage__card" color="#a12d00" [icon]="books" title="Doc">
+            You can find here information about the Plug-in architecture, list of available Plugins and the recipe
+            how to create your own plug-in.
+            This gives you a possibility to understand the core concept of Steward architecture and options to
+            attach your own solution.
+            In this way you can customize a Steward dashboard to your own needs based on exists and on your own
+            plugins.Feel free and create your own "Steward World"!
+        </app-card>
+        <app-card class="homepage__card" color="#004399" title="Terms and Conditions" [icon]="termsAndConditons">
+            You can find here information about the Plug-in architecture, list of available Plugins and the recipe
+            how to create your own plug-in.
+            This gives you a possibility to understand the core concept of Steward architecture and options to
+            attach your own solution.
+            In this way you can customize a Steward dashboard to your own needs based on exists and on your own
+            plugins.Feel free and create your own "Steward World"!
+        </app-card>
+        <app-card class="homepage__card" color="#ff0000" [icon]="compare" title="Changelog">
+            You can find here information about the Plug-in architecture, list of available Plugins and the recipe
+            how to create your own plug-in.
+            This gives you a possibility to understand the core concept of Steward architecture and options to
+            attach your own solution.
+            In this way you can customize a Steward dashboard to your own needs based on exists and on your own
+            plugins.Feel free and create your own "Steward World"!
+        </app-card>
+        <app-card class="homepage__card" color="#a6e600" [icon]="cake" title="Become a Baker">
+            You can find here information about the Plug-in architecture, list of available Plugins and the recipe
+            how to create your own plug-in.
+            This gives you a possibility to understand the core concept of Steward architecture and options to
+            attach your own solution.
+            In this way you can customize a Steward dashboard to your own needs based on exists and on your own
+            plugins.Feel free and create your own "Steward World"!
+        </app-card>
+    </section>
 
 
 </div>
