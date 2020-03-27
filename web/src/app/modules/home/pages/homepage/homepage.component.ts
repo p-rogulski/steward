@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { faPlug } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   templateUrl: './homepage.component.html',

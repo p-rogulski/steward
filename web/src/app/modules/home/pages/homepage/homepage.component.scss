@@ -1,12 +1,12 @@
 .homepage {
-  margin-top: 10px;
   justify-content: space-around;
+  &__header{
+    font-size: 2rem;
+    color: #303030;
+  }
 
   &__article {
-    &--nth2 {
-      display: flex;
-      flex-flow: column;
-    }
+      line-height: 2.7rem;
   }
 
   &__section-get{
@@ -15,6 +15,10 @@
     text-align: center;
   }
 
+  &__events{
+    margin-top:80px;
+  }
+  
   &__button {
     width:300px;
     height:50px;

@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import { faBlog, faBars, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faBlog, faBars, faEnvelope, faRocket } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav',
@@ -10,6 +10,7 @@ export class NavComponent implements AfterViewInit {
  blog=faBlog;
  bars=faBars;
  envelope= faEnvelope;
+ rocket = faRocket;
 
   @ViewChild("navItems") topnavItems: ElementRef;
 
