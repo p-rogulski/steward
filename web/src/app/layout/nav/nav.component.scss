@@ -10,9 +10,10 @@
   }
 
   .nav__items {
+    margin-top: 3px;
     display: flex;
     padding: 0px;
-    margin-top: 3px;
+    margin:0;
 
     .nav__item {
       display: flex;

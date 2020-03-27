@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import { faBars, faChalkboard, faCog, faSignInAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faBlog, faBars, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav',
@@ -7,11 +7,9 @@ import { faBars, faChalkboard, faCog, faSignInAlt, faUserPlus } from '@fortaweso
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements AfterViewInit {
-  bars = faBars;
-  halkboard = faChalkboard
-  cog = faCog;
-  signInAlt=faSignInAlt;
-  userPlus=faUserPlus;
+ blog=faBlog;
+ bars=faBars;
+ envelope= faEnvelope;
 
   @ViewChild("navItems") topnavItems: ElementRef;
 

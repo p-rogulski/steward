@@ -1,6 +1,8 @@
 .card {
+  position:relative;
   margin-top: 2rem;
   width: 300px;
+
 
   &__header {
     height: 80px;
@@ -22,10 +24,13 @@
     box-sizing: border-box;
     padding: 8px;
     font-size: 1.6rem;
-
   }
 
   &__content {
+    display:flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height:240px;
     display: flex;
     background: #cccccc2e;
     flex-flow: column;
@@ -34,10 +39,10 @@
     margin-top: 5px;
     border: 1px #888888 solid;
     overflow: hidden;
-    max-height: 300px;
   }
 
   &__button {
+    width:100%;
     margin-top:2rem;
     padding: 2rem 0 2rem 0;
     cursor:pointer;
