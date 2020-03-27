@@ -1,5 +1,5 @@
 
-<img height="300" src="https://github.com/p-rogulski/steward/blob/master/media/steward_logo.svg"/>
+
 
 
 # What does the Steward is?
