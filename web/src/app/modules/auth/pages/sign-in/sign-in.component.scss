@@ -9,6 +9,7 @@
     min-height:200px;
     padding:22px;
     border:2px #ffffff solid;
+    background-color: #cccccc2e;
     border-radius: 8px;
 
     &__icon{
@@ -56,10 +57,18 @@
         background-color: #55acff;
         border: 1px #007fd9 solid;
         color: #ffffff;
-
+        outline:none;
         &:hover{
             background-color: #2b98ff;
           }
+    }
+
+    &__link{
+        display:block;
+        color:#ffffff;
+        margin-top: 80px;
+        font-size: 1.5rem;
+        text-align: right;
     }
 
 }
