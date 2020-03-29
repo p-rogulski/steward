@@ -11,7 +11,7 @@ export class CardComponent implements OnInit, AfterViewInit {
   @Input() color: string;
   @Input() icon: string;
   @Input() title: string;
-  @ViewChild("cardHeader") header: ElementRef;
+  @ViewChild('cardHeader') header: ElementRef;
  
 
   constructor(private renderer: Renderer2) { }
@@ -20,7 +20,7 @@ export class CardComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.renderer.setStyle(this.header.nativeElement, 'backgroundColor', this.color)
+    this.renderer.setStyle(this.header.nativeElement, 'backgroundColor', this.color);
   }
 
 }

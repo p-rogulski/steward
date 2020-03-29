@@ -1,0 +1,21 @@
+<div class="plugin">
+  <div class="plugin__header">  
+      <img src="../../../../../assets/img/plug.png" alt="thumbnail" class="plugin__icon  plugin__icon--header"> 
+      <h2 class="plugin__title">{{ title }}</h2>
+ </div>
+ <div class="plugin__status plugin__status--running">
+  <fa-icon class="plugin__icon plugin__icon--bulb" [icon]="bulb"></fa-icon>
+  <h3 class="plugin__title plugin__title--status">Running</h3>
+</div>
+  <div class="plugin__thumbnail-container">
+    <img [src]="thumbnail" alt="thumbnail" class="plugin__thumbnail">
+  </div>
+
+  <div class="plugin__description">
+    <ng-content></ng-content>
+  </div>
+  <div class="plugin__actions">
+    <button class="plugin__button plugin__button--stop">Stop</button>
+    <button class="plugin__button plugin__button--edit">edit</button>
+  </div>
+</div>

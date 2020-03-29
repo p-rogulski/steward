@@ -1,0 +1,15 @@
+.dashboard {
+ &__plugins{
+     display: flex;
+     justify-content: space-between;
+     flex-flow: row wrap;
+ }
+   &__plugin{
+    margin-top: 2rem;
+    margin-left:20px;
+
+   }
+
+}
+
+

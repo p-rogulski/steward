@@ -1,0 +1,44 @@
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+  
+    .header {
+      position: fixed;
+      z-index:1;
+      width: 100%;
+  
+      background-color: #360099;
+      margin: auto;
+  
+      &__container-center {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1366px;
+        margin: auto;
+      }
+  
+      &__logo-container{
+        overflow:hidden;
+        max-height: 52px;
+      }
+  
+      &__logo {
+        width: 173px;
+        height: 65px;
+        margin-bottom: -10px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 4px;
+      }
+    }
+  
+    .content {
+      min-height: 100vh;
+      padding: 6rem 2rem 2rem 2rem;
+      margin: auto;
+      max-width: 1366px;
+      font-size: 1.4rem;
+    }
+  }
+  

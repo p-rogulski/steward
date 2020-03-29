@@ -7,7 +7,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { NavComponent } from './layout/nav/nav.component';
 import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
-import { DemoLayoutComponent } from './layout/demo-layout/demo-layout.component';
+import { SessionLayoutComponent } from './layout/session-layout/session-layout.component';
+
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { DemoLayoutComponent } from './layout/demo-layout/demo-layout.component'
     HomeLayoutComponent,
     NavComponent,
     AuthLayoutComponent,
-    DemoLayoutComponent
+    SessionLayoutComponent,
   ],
   imports: [
     BrowserModule,
