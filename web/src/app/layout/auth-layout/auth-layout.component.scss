@@ -1,0 +1,14 @@
+.wrapper{
+    position:relative;
+    background-image: url('../../../assets/img/auth-background.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 100vh;
+    width: 100vw;
+    padding:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

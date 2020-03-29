@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
-import { MyAccountComponent } from './modules/session/my-account/my-account.component';
+import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 
 const routes: Routes = [{
   path: '',
@@ -19,8 +19,14 @@ const routes: Routes = [{
     }]
 },
 {
-  path: 'account',
-  component: MyAccountComponent
+  path: '',
+  component: AuthLayoutComponent,
+  children: [
+    {
+      path: 'auth',
+      loadChildren: () =>
+        import('./modules/auth/auth.module').then(m => m.AuthModule)
+    }]
 },
 ];
 

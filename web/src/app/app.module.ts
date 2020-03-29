@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavComponent } from './layout/nav/nav.component';
 import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
+import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
+import { DemoLayoutComponent } from './layout/demo-layout/demo-layout.component';
+
 
 @NgModule({
   declarations: [
@@ -13,12 +16,13 @@ import { HomeLayoutComponent } from './layout/home-layout/home-layout.component'
     FooterComponent,
     HomeLayoutComponent,
     NavComponent,
+    AuthLayoutComponent,
+    DemoLayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
