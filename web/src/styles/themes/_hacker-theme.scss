@@ -1,10 +1,13 @@
-$hacker-primary: #000000;
-$hacker-secondary: #000000;
-$hacker-warn:#000000;
-$hacker-success:#000000;
-$hacker-info:#000000;
-$hacke-default:#000000;
-
-@mixin hackerTheme() {
-    
-}
+/* colors */
+/* colors */
+$color-pallete: (
+"light": #ffffff, 
+"dark": #000000, 
+"primary": #007e00,
+"secondary":#b8fc78,
+"info":#e6e6e6e3,
+"success":#00c943,
+"warning":#ffa947,
+"danger":#cf0000,
+"transparent":transparent
+);

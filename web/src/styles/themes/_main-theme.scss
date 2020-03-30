@@ -1,10 +1,30 @@
-$main-primary: #000000;
-$main-secondary: #000000;
-$main-warn:#000000;
-$main-success:#000000;
-$main-info:#000000;
-$main-default:#000000;
+@use "sass:map";
 
-@mixin mainTheme() {
-    
-}
+/* colors */
+$color-pallete: ("light": #ffffff,
+  "dark": #000000,
+  "primary": #55acff,
+  "secondary":#bebebe,
+  "info":#4ecdff,
+  "success":#74eb04,
+  "warning":#ffa947,
+  "danger":#ff4747,
+  "transparent":transparent);
+
+/*  
+
+*/
+
+/* fonts */
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+$font-sizes:("small": 0.9rem, "regular": 1.6rem, "large": 2rem);
+
+/* size */
+$size-variants:("small":0.5rem,"regular":1rem,"large":1.8rem);
+
+/** widths **/
+$layoutWidth:1366px;
+$layoutHeight:100vh;
+
+
+

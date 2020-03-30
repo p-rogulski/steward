@@ -1,14 +1,65 @@
-@import './_hacker-theme';
-@import './_light-theme';
+@use "sass:color";
+@use "sass:map";
+@import './main-theme';
 
-$hacker:'hacker-theme';
-$light:'light-theme';
+@mixin button-variants($args...) {
+  @each $name in $args {
+    $color: map.get($color-pallete, $name);
 
-@mixin theme($name) {
-    @if($name==$hacker) {
-        @include hackerTheme();
+    &--#{$name} {
+      background-color: $color;
+      border: 1px adjust-color($color, $lightness:-20%) solid;
+
+      &:hover {
+        background-color: adjust-color($color, $lightness:-3%);
+      }
     }
-    @else if($name==$light) {
-        @include hackerTheme();
-    }
+  }
 }
+
+@mixin button-types($args...) {
+  @each $name in $args {
+    $size: map.get($size-variants, $name);
+
+    &--#{$name} {
+      padding:$size;
+    }
+  }
+}
+
+/** Layout */
+.wrapper {
+  position: relative;
+  min-height: $layoutHeight;
+
+  .header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    margin: auto;
+  }
+
+  .content {
+    min-height: $layoutHeight;
+    padding: 6rem 2rem 2rem 2rem;
+    margin: auto;
+    max-width: $layoutWidth;
+    font-size: 1.4rem;
+  }
+}
+
+/** Buttons */
+.button {
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: map.get($size-variants, 'regular');
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  @include button-variants(primary, secondary, success, danger);
+  @include button-types(small, large);
+}
+
