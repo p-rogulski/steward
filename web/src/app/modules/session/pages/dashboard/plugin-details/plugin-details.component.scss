@@ -1,0 +1,23 @@
+.plugin-details{
+    max-width:450px;
+
+    &__top{
+        padding:2rem;
+    }
+
+    
+    &__thumbnail{
+        width:auto;
+        height:300px;
+    }
+
+    &__form{
+        display:flex;
+        flex-flow: column;
+        margin-top:20px;
+    }
+
+    &__input{
+        margin-top:20px;
+    }
+}

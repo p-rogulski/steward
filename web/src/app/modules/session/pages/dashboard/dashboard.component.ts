@@ -16,6 +16,6 @@ export class DashboardComponent implements OnInit {
   }
 
   getPlugins(){
-    this.plugins=this.dashboardService.getData();
+    this.plugins=this.dashboardService.getPlugins();
   }
 }

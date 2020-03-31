@@ -1,0 +1,13 @@
+<div class="plugin-details">
+  <div class="plugin-details__top">
+    <img [src]="pluginDetails.thumbnail" alt="thumbnail" class="plugin-details__thumbnail" />
+  </div>
+
+  <div class="plugin-details__bottom">
+    <button class="plugin-details">{{pluginDetails.status}}</button>
+    <form class="plugin-details__form">
+      <input type="text" [(ngModel)]="pluginDetails.title" name="title" class="plugin-details__input" />
+      <input type="text" [(ngModel)]="pluginDetails.description" name="description" class="plugin-details__input" />
+    </form>
+  </div>
+</div>

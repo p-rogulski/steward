@@ -12,6 +12,7 @@ import { SessionLayoutComponent } from './layout/session-layout/session-layout.c
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { SessionLayoutComponent } from './layout/session-layout/session-layout.c
     NavComponent,
     AuthLayoutComponent,
     SessionLayoutComponent,
+
   ],
   imports: [
     BrowserModule,

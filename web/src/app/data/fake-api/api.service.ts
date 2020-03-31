@@ -1,6 +1,7 @@
 
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+
 import data from './data';
 
 @Injectable({
@@ -9,11 +10,12 @@ import data from './data';
 export class FakeApiService {
 
   get(url: string): Observable<any> {
-    switch (url) {
-      case '/plugins':
-        return of(data.plugins);
-      default: 
-        break;
+    if(url.match('^/\plugins$')){
+      return of(data.plugins);
+    }else if(url.match('^/\plugin/\[0-9]+$')){
+      const splited=url.split('/');
+      const id=Number(splited[splited.length-1]);
+      return of(data.plugins.filter((plugin)=>plugin.id===id)[0]);
     }
   }
 }

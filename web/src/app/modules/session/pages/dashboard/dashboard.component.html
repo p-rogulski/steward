@@ -1,6 +1,7 @@
 <div class="dashboard">
   <div class="dashboard__plugins">
     <app-plugin *ngFor="let plugin of plugins | async" 
+      id="{{plugin.id}}"
       title="{{plugin.title}}" 
       thumbnail="{{plugin.thumbnail}}"
       class="dashboard__plugin">

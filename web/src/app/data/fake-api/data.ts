@@ -43,32 +43,33 @@ export default {
       "thumbnail": "https://cdn.pixabay.com/photo/2017/08/26/23/37/business-2684758_960_720.png",
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "The Singer",
       "status": "running",
       "description": "Fake app 7",
       "thumbnail": "https://cdn.pixabay.com/photo/2016/07/19/06/56/vector-file-1527609_960_720.png",
     },
     {
-      "id": 6,
+      "id": 8,
       "title": "Rocketpocket",
       "status": "running",
       "description": "Fake app 8",
       "thumbnail": "https://cdn.pixabay.com/photo/2018/11/10/20/04/air-3807394_1280.png",
     },
     {
-      "id": 6,
+      "id": 9,
       "title": "Fishdish",
       "status": "running",
       "description": "Fake app 9",
       "thumbnail": "https://cdn.pixabay.com/photo/2018/04/21/11/48/fishing-3338291_1280.png",
     },
     {
-      "id": 6,
+      "id": 10,
       "title": "Dinorapid",
       "status": "running",
       "description": "Fake app 10",
       "thumbnail": "https://cdn.pixabay.com/photo/2018/02/22/03/19/dinosaur-3172048_1280.png",
-    }
+    },
+    
   ]
 }

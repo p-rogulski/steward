@@ -1,4 +1,4 @@
-<div class="plugin">
+<div class="plugin" (click)="showDetails($event)">
   <div class="plugin__header">  
       <img src="../../../../../assets/img/plug.png" alt="thumbnail" class="plugin__icon  plugin__icon--header"> 
       <h2 class="plugin__title">{{ title }}</h2>
@@ -14,8 +14,5 @@
   <div class="plugin__description">
     <ng-content></ng-content>
   </div>
-  <div class="plugin__actions">
-    <button class="plugin__button button button--danger button--small">Stop</button>
-    <button class="plugin__button button button--primary">edit</button>
-  </div>
+
 </div>
