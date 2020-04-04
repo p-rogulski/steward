@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute  } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { DashboardService } from '../../../../../data/service/dashboard.service';
 
 @Component({
@@ -8,19 +8,18 @@ import { DashboardService } from '../../../../../data/service/dashboard.service'
   styleUrls: ['./plugin-details.component.scss']
 })
 export class PluginDetailsComponent implements OnInit {
-  pluginDetails:any;
-  constructor(private dashboardService:DashboardService,private activatedRoute: ActivatedRoute) { }
+  pluginDetails: any;
+  constructor(private dashboardService: DashboardService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.activatedRoute.paramMap.subscribe((params)=>{
-      this.getDetails(Number(params.get("id")));
+    this.activatedRoute.paramMap.subscribe((params) => {
+      this.getDetails(Number(params.get('id')));
     })
   }
-  
-  getDetails(id:number){
-    this.dashboardService.getPluginDetails(id).subscribe((pluginDetails)=>{
-      console.log(pluginDetails,"test")
-      this.pluginDetails=pluginDetails;
+
+  getDetails(id: number) {
+    this.dashboardService.getPluginDetails(id).subscribe((pluginDetails) => {
+      this.pluginDetails = pluginDetails;
     })
   }
 

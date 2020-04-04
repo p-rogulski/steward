@@ -1,13 +1,50 @@
 <div class="plugin-details">
-  <div class="plugin-details__top">
-    <img [src]="pluginDetails.thumbnail" alt="thumbnail" class="plugin-details__thumbnail" />
-  </div>
+  <div class="plugin-details__section plugin-details__section--left">
+    <h1 class="title title--large">
+      Settings
+    </h1>
+    <div class="plugin-details__avatar-container">
+      <img [src]="pluginDetails.thumbnail" alt="thumbnail" class="plugin-details__thumbnail" />
+      <button
+        class="plugin-details__button plugin-details__button--change-avatar button button--small button--secondary">
+        Change avatar
+      </button>
+    </div>
 
-  <div class="plugin-details__bottom">
-    <button class="plugin-details">{{pluginDetails.status}}</button>
     <form class="plugin-details__form">
-      <input type="text" [(ngModel)]="pluginDetails.title" name="title" class="plugin-details__input" />
-      <input type="text" [(ngModel)]="pluginDetails.description" name="description" class="plugin-details__input" />
+      <input type="text" [(ngModel)]="pluginDetails.title" name="title" class="plugin-details__input input" />
+      <textarea [(ngModel)]="pluginDetails.description" name="description"
+        class="plugin-details__input plugin-details__input--textarea input"></textarea>
+      <button type="submit" class="plugin-details__button--save-changes button button--primary">
+        Save changes
+      </button>
     </form>
+  </div>
+  <div class="plugin-details__section plugin-details__section--right">
+    <h1 class="title title--large">
+      Statictics
+    </h1>
+
+    <fieldset class="plugin-details__fieldset fieldset ">
+      <legend class="legend">Reliability</legend>
+      <div class="plugin-details__field-group field-group">
+        <label class="plugin-details__label label field--label">POFOD</label>
+        <span class="plugin-details__value text text--regular">0.003</span>
+
+        <label class="plugin-details__label label field--label">MTTF</label>
+        <span class="plugin-details__value text text--regular">500</span>
+
+        <label class="plugin-details__label label field--label">AVAIL</label>
+        <span class="plugin-details__value text text--regular">0.09</span>
+
+        <label class="plugin-details__label label field--label">ROCOF</label>
+        <span class="plugin-details__value text text--regular">0.07</span>
+      </div>
+    </fieldset>
+
+    <fieldset class="plugin-details__fieldset fieldset">
+      <legend class="plugin-details__legend legend">Traffic</legend>
+      <app-chart></app-chart>
+    </fieldset>
   </div>
 </div>

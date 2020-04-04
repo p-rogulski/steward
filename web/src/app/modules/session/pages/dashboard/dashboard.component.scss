@@ -1,4 +1,22 @@
 .dashboard {
+
+
+&__header{
+border-radius:4px;
+ background-color:#eee;
+ padding:2rem;
+ position:sticky;
+ width: inherit;
+ position: -webkit-sticky;
+ position: sticky;
+ top: 50px;
+}
+
+&__input{
+  box-sizing: border-box;
+}
+
+
  &__plugins{
      display: flex;
      justify-content: space-evenly;

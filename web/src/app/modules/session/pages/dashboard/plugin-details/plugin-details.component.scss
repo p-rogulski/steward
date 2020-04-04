@@ -1,23 +1,73 @@
 .plugin-details{
-    max-width:450px;
-
-    &__top{
-        padding:2rem;
+    display:flex;
+    flex-flow: row wrap;
+   
+    &__avatar-container{
+        display:flex;
+        flex-flow: column;
+        align-items: center;
     }
 
-    
+    &__button{
+        &--change-avatar{
+            margin-top:20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__fieldset{
+        margin-top:20px;
+    }
+
+    &__field-group{
+        justify-content: space-between;
+    }
+
+    &__section{
+        width:50%;
+        height:100%;
+        min-width:400px;
+        padding:2rem;
+        box-sizing: border-box;
+    }
+
     &__thumbnail{
         width:auto;
         height:300px;
     }
 
     &__form{
-        display:flex;
+        display: flex;
         flex-flow: column;
-        margin-top:20px;
+        min-height:200px;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    &__button{
+        &--save-changes{
+            align-self: flex-end;
+        }
     }
 
     &__input{
-        margin-top:20px;
+      box-sizing: border-box;
+    
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    :host {
+      width: 100%;
+      margin-top: 4rem;
+  
+      .plugin-details {
+        width: 100%;
+        &__section{
+            width:100%;
+        }
+      }
+    }
+  }
+  
