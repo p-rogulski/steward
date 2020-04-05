@@ -10,12 +10,12 @@ import data from './data';
 export class FakeApiService {
 
   get(url: string): Observable<any> {
-    if(url.match('^/\plugins$')){
+    if (url.match('^/\plugins$')) {
       return of(data.plugins);
-    }else if(url.match('^/\plugin/\[0-9]+$')){
-      const splited=url.split('/');
-      const id=Number(splited[splited.length-1]);
-      return of(data.plugins.filter((plugin)=>plugin.id===id)[0]);
+    } else if (url.match('^/\plugin/\[0-9]+$')) {
+      const splited = url.split('/');
+      const id = Number(splited[splited.length - 1]);
+      return of(data.plugins.filter((plugin) => plugin.id === id)[0]);
     }
   }
 }

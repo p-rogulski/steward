@@ -1,7 +1,7 @@
 <div class="dashboard">
   <div class="dashboard__header">
     <div class="dashboard__actions-group">
-      <button class="dashboard__button dashboard__button--create button button--success">Create Plugin</button>
+      <button class="dashboard__button dashboard__button--create button button--success" (click)="addPlugin()">Create Plugin</button>
       <button class="dashboard__button dashboard__button--manage button button--secondary button--small">Change order</button>
       <button class="dashboard__button dashboard__button--manage button button--secondary button--small">Group by</button>
     </div>
@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="dashboard__plugins">
-    <app-plugin *ngFor="let plugin of plugins | async" id="{{plugin.id}}" title="{{plugin.title}}"
+    <app-plugin *ngFor="let plugin of plugins$ | async" id="{{plugin.id}}" title="{{plugin.title}}"
       thumbnail="{{plugin.thumbnail}}" class="dashboard__plugin">
       {{plugin.description}}
     </app-plugin>

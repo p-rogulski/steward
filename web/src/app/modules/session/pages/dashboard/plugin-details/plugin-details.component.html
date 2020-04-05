@@ -1,8 +1,14 @@
+<a class="nav__anchor" [routerLink]="['/session/dashboard']" routerLinkActive="active">
+ &lt;&lt; Back to dashboard
+</a>
 <div class="plugin-details">
+ 
   <div class="plugin-details__section plugin-details__section--left">
+
     <h1 class="title title--large">
       Settings
     </h1>
+
     <div class="plugin-details__avatar-container">
       <img [src]="pluginDetails.thumbnail" alt="thumbnail" class="plugin-details__thumbnail" />
       <button
@@ -15,9 +21,16 @@
       <input type="text" [(ngModel)]="pluginDetails.title" name="title" class="plugin-details__input input" />
       <textarea [(ngModel)]="pluginDetails.description" name="description"
         class="plugin-details__input plugin-details__input--textarea input"></textarea>
-      <button type="submit" class="plugin-details__button--save-changes button button--primary">
-        Save changes
-      </button>
+      <div class="plugin-details__actions">
+
+
+        <button type="submit" class="plugin-details__button--delete button button--danger">
+          Delete plugin
+        </button>
+        <button type="submit" class="plugin-details__button--save-changes button button--primary">
+          Save changes
+        </button>
+      </div>
     </form>
   </div>
   <div class="plugin-details__section plugin-details__section--right">
@@ -25,7 +38,7 @@
       Statictics
     </h1>
 
-    <fieldset class="plugin-details__fieldset fieldset ">
+    <fieldset class="plugin-details__fieldset fieldset">
       <legend class="legend">Reliability</legend>
       <div class="plugin-details__field-group field-group">
         <label class="plugin-details__label label field--label">POFOD</label>
