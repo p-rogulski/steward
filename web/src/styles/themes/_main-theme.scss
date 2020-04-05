@@ -3,9 +3,9 @@
 /* colors */
 $color-pallete: ('light': #ffffff,
   'dark': #000000,
-  'grey':#797979,
+  'grey':#9b9b9b,
   'primary': #55acff,
-  'secondary':#e2dada,
+  'secondary':#f3f3f3,
   'info':#4ecdff,
   'success':#74eb04,
   'warning':#ffa947,
@@ -21,7 +21,7 @@ $font-weights: ('regular': 400, 'medium': 500, 'bold': 700);
 $font-sizes:('small': 1.2rem, 'regular': 1.6rem, 'large': 2rem);
 
 /* size */
-$size-variants:('small':0.5rem,'regular':1rem,'large':1.8rem);
+$size-variants:('small':0.5rem,'regular':1rem,'large':1.4rem);
 
 /** widths **/
 $layoutWidth:1366px;
