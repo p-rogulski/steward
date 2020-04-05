@@ -2,14 +2,10 @@
   cursor: pointer;
   margin-top: 2rem;
   width: 300px;
-  border-left: 1px #888888 solid;
-  border-right: 1px #888888 solid;
-  border-bottom: 1px #888888 solid;
   border-radius: 4px;
 
   &__header {
     width: 100%;
-    margin: 0 auto;
     height: 80px;
     display: flex;
     align-items: center;
@@ -20,6 +16,7 @@
   }
 
   &__status {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -60,7 +57,7 @@
 
   &__thumbnail-container {
     box-sizing: border-box;
-    width: 100%;
+   background-color: #ececec;
     height: 130px;
     overflow: hidden;
     padding:1rem;
@@ -74,6 +71,7 @@
   }
 
   &__description {
+    box-sizing: border-box;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -83,17 +81,6 @@
     flex-flow: column;
     padding: 18px;
     overflow: hidden;
-  }
-
-  &__actions {
-    display: flex;
-    justify-content: space-around;
-    padding: 22px;
-    background: #d1d2d2;
-  }
-
-  &__button {
-    width: 45%;
   }
 }
 

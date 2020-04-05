@@ -2,17 +2,17 @@ export default {
   plugins: [
     {
       id: 1,
-      title: '(Ca)root',
+      title: 'Jimmy',
       status: 'running',
       description: 'Fake app 1',
-      thumbnail: 'https://cdn.pixabay.com/photo/2016/10/18/19/24/carrot-1751148_1280.png'
+      thumbnail: 'https://cdn.pixabay.com/photo/2020/02/04/18/06/vector-4819009_960_720.png'
     },
     {
       id: 2,
-      title: 'Colorcat',
+      title: 'Monstercat',
       status: 'running',
       description: 'Fake app 2',
-      thumbnail: 'https://cdn.pixabay.com/photo/2018/05/01/07/47/animal-3364909_960_720.png'
+      thumbnail: 'https://cdn.pixabay.com/photo/2018/07/12/14/04/surprise-3533498_960_720.png'
     },
     {
       id: 3,
@@ -30,10 +30,10 @@ export default {
     },
     {
       id: 5,
-      title: 'Bulb-baker',
+      title: 'MrCactus',
       status: 'running',
       description: 'Fake app 5',
-      thumbnail: 'https://cdn.pixabay.com/photo/2016/11/30/18/14/idea-1873540_960_720.png',
+      thumbnail: 'https://cdn.pixabay.com/photo/2017/03/02/15/00/cactus-2111516_960_720.png',
     },
     {
       id: 6,

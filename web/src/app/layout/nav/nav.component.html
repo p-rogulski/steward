@@ -3,7 +3,8 @@
     <fa-icon class="nav__icon nav__icon--menu" [icon]="bars" (click)="toggleDropDown()"></fa-icon>
 
     <ul class="nav__items" #navItems>
-        <li class="nav__item">
+        <ng-content></ng-content>
+        <!-- <li class="nav__item">
             <a class="nav__anchor" [routerLink]="['/auth/sign-in']" routerLinkActive="active">
                 <fa-icon class="nav__icon" [icon]="rocket"></fa-icon>
                 <span class="nav__text">Online Demo</span>
@@ -20,6 +21,6 @@
                 <fa-icon class="nav__icon" [icon]="envelope"></fa-icon>
                 <span class="nav__text">Contact Us</span>
             </a>
-        </li>
+        </li> -->
     </ul>
 </nav>

@@ -7,21 +7,21 @@ import { faBlog, faBars, faEnvelope, faRocket } from '@fortawesome/free-solid-sv
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements AfterViewInit {
- blog=faBlog;
- bars=faBars;
- envelope= faEnvelope;
- rocket = faRocket;
+  blog = faBlog;
+  bars = faBars;
+  envelope = faEnvelope;
+  rocket = faRocket;
 
-  @ViewChild("navItems") topnavItems: ElementRef;
+  @ViewChild('navItems') topnavItems: ElementRef;
 
   toggleDropDown() {
     const menuItemsElement: HTMLElement = this.topnavItems.nativeElement;
-    const menuIsOpen: boolean = menuItemsElement.classList.contains("nav__items--open")
+    const menuIsOpen: boolean = menuItemsElement.classList.contains('nav__items--open');
 
     if (menuIsOpen) {
-      menuItemsElement.classList.remove("nav__items--open");
+      menuItemsElement.classList.remove('nav__items--open');
     } else {
-      menuItemsElement.classList.add("nav__items--open");
+      menuItemsElement.classList.add('nav__items--open');
     }
   }
 

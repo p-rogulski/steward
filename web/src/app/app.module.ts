@@ -9,6 +9,7 @@ import { NavComponent } from './layout/nav/nav.component';
 import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { SessionLayoutComponent } from './layout/session-layout/session-layout.component';
+import { NavItemComponent } from './layout/nav/nav-item/nav-item.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SessionLayoutComponent } from './layout/session-layout/session-layout.c
     NavComponent,
     AuthLayoutComponent,
     SessionLayoutComponent,
+    NavItemComponent,
   ],
   imports: [
     BrowserModule,
