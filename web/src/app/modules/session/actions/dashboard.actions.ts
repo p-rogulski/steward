@@ -1,4 +1,4 @@
-import { IPlugin, IPluginDetails } from '../../../data/models/plugin.model';
+import { IPlugin, IPluginDetails } from '@data/models/plugin.model';
 
 export class GetPlugins {
     static readonly type = '[PLUGIN] GetAll';

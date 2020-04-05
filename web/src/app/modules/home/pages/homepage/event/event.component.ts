@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./event.component.scss']
 })
 export class EventComponent implements OnInit {
-  @Input() title:string;
+  @Input() title: string;
   info = '../../../../assets/img/info.png';
   constructor() { }
 

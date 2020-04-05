@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DashboardService } from '../../../../../data/service/dashboard.service';
+import { DashboardService } from '@data/service/dashboard.service';
 
 @Component({
   selector: 'app-plugin-details',

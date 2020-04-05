@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { tap } from 'rxjs/operators';
-import { DashboardService } from '../../../data/service/dashboard.service';
-import { IPlugin } from '../../../data/models/plugin.model';
+import { DashboardService } from '@data/service/dashboard.service';
+import { IPlugin } from '@data/models/plugin.model';
 import { GetPlugins, AddPlugin, RemovePlugin } from '../actions/dashboard.actions';
 
 export interface IDashboardStateModel {
