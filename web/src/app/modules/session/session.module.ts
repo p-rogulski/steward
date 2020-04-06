@@ -11,9 +11,10 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { PluginComponent } from './pages/dashboard/plugin/plugin.component';
 import { PluginDetailsComponent } from './pages/dashboard/plugin-details/plugin-details.component';
 import { ChartComponent } from './pages/dashboard/plugin-details/chart/chart.component';
+import { TopHolderComponent } from './pages/dashboard/top-holder/top-holder.component';
 
 @NgModule({
-  declarations: [PluginComponent, PluginDetailsComponent, DashboardComponent, ChartComponent],
+  declarations: [PluginComponent, PluginDetailsComponent, DashboardComponent, ChartComponent, TopHolderComponent],
   imports: [
     CommonModule,
     FormsModule,

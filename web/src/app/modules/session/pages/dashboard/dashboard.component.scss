@@ -1,34 +1,5 @@
 .dashboard {
-  &__header {
-    position: sticky;
-    width: inherit;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 52px;
-    padding: 2rem;
-    box-sizing: border-box;
-    border-radius: 4px;
-    background-color: #634dfb;
-  }
 
-  &__actions-group {
-    text-align: right;
-    margin-bottom: 10px;
-  }
-
-  &__button {
-    margin-left: 10px;
-    &--create {
-      position: relative;
-      float: left;
-      margin-left: 0px;
-      bottom: 10px;
-    }
-  }
-
-  &__input {
-    box-sizing: border-box;
-  }
 
   &__plugins {
     display: flex;

@@ -85,7 +85,7 @@
   color: #fff;
 
   font-size: 1.2rem;
-  @include color-variants(primary, secondary, success, danger, transparency);
+  @include color-variants(primary, secondary, success, upload, danger, transparency);
   @include size-variants(small, large);
 }
 
