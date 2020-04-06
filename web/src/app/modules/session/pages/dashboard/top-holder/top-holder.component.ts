@@ -13,6 +13,8 @@ import { IPlugin } from 'src/app/data/models/plugin.model';
 export class TopHolderComponent implements OnInit {
   public upload = faUpload;
   public plug = faPlug;
+  public creationMode = false;
+
   constructor(private store: Store) { }
 
   ngOnInit(): void {
@@ -25,5 +27,13 @@ export class TopHolderComponent implements OnInit {
       description: f.value.description,
       thumbnail: '',
     } as IPlugin));
+  }
+
+  create() {
+    this.creationMode = true;
+  }
+
+  cancel() {
+    this.creationMode = false;
   }
 }

@@ -1,7 +1,7 @@
 <div class="top-holder">
   <div class="top-holder__header">
     <div class="top-holder__actions-group">
-      <button class="top-holder__button top-holder__button--create button button--success">Create plugin</button>
+      <button class="top-holder__button top-holder__button--create button button--success" (click)="create()">Create plugin</button>
       <button class="top-holder__button top-holder__button--manage button button--secondary button--small">Change
         order</button>
       <button class="top-holder__button top-holder__button--manage button button--secondary button--small">Group
@@ -13,7 +13,7 @@
   </div>
 
 
-  <div class="top-holder__drawer">
+  <div class="top-holder__drawer" *ngIf="creationMode">
     <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate class="top-holder__form">
       <button class="top-holder__button top-holder__button--upload button button--upload button--large">
         <fa-icon class="top-holder__icon" [icon]="upload"></fa-icon> Upload plugin
@@ -31,7 +31,7 @@
       <textarea ngModel name="description" placeholder="description"
         class="top-holder__input top-holder__input--textarea input"></textarea>
       <div class="top-holder__actions-group top-holder__actions-group--bottom">
-        <button type="submit" class="top-holder__button top-holder__button--cancel button button--secondary button--large">
+        <button class="top-holder__button top-holder__button--cancel button button--secondary button--large" (click)="cancel()">
           Cancel
         </button>
         <button type="submit" class="top-holder__button top-holder__button--save button button--primary button--large">
