@@ -1,17 +1,12 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import { faBlog, faBars, faEnvelope, faRocket } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements AfterViewInit {
-  blog = faBlog;
-  bars = faBars;
-  envelope = faEnvelope;
-  rocket = faRocket;
 
+export class NavComponent implements AfterViewInit {
   @ViewChild('navItems') topnavItems: ElementRef;
 
   toggleDropDown() {

@@ -1,11 +1,18 @@
 <div class="top-holder">
   <div class="top-holder__header">
     <div class="top-holder__actions-group">
-      <button class="top-holder__button top-holder__button--create button button--success" (click)="create()">Create plugin</button>
-      <button class="top-holder__button top-holder__button--manage button button--secondary button--small">Change
-        order</button>
-      <button class="top-holder__button top-holder__button--manage button button--secondary button--small">Group
-        by</button>
+      <button class="top-holder__button top-holder__button--create button button--success" (click)="create()">
+        <fa-icon class="top-holder__icon" icon="chevron-down"></fa-icon>
+        Create plugin
+      </button>
+      <button class="top-holder__button top-holder__button--manage button button--secondary button--small">
+        <fa-icon class="top-holder__icon" icon="th-large"></fa-icon> 
+        Change order
+      </button>
+      <button class="top-holder__button top-holder__button--manage button button--secondary button--small">
+        <fa-icon class="top-holder__icon" icon="tag"></fa-icon>
+        Group by
+      </button>
     </div>
     <div class="top-holder__search-container">
       <input class="top-holder__input input input--large" placeholder="search" />
@@ -16,28 +23,37 @@
   <div class="top-holder__drawer" *ngIf="creationMode">
     <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate class="top-holder__form">
       <button class="top-holder__button top-holder__button--upload button button--upload button--large">
-        <fa-icon class="top-holder__icon" [icon]="upload"></fa-icon> Upload plugin
+        <fa-icon class="top-holder__icon" icon="upload"></fa-icon> Upload plugin
       </button>
       <progress id="file" class="top-holder__progress" value="32" max="100"> 32% </progress> 30%
-        <div class="top-holder__plug-container">
-          <div class="top-holder__plug-avatar">
-            <fa-icon class="top-holder__icon top-holder__icon--plug" [icon]="plug"></fa-icon>
-          </div>
-          <button class="top-holder__button top-holder__button--avatar button button--secondary button--small">
-            Set avatar
-          </button>
+      <div class="top-holder__plug-container">
+        <div class="top-holder__plug-avatar">
+          <fa-icon class="top-holder__icon top-holder__icon--plug" icon="plug"></fa-icon>
         </div>
+        <button class="top-holder__button top-holder__button--avatar button button--secondary button--small">
+          Set avatar
+        </button>
+      </div>
+      <select class="top-holder__select select">
+        <option value="" disabled selected class="option">Assign to flow</option>
+        <option>Flow-1</option>
+        <option>Flow-2</option>
+        <option>Flow-3</option>
+        <option>Flow-4</option>
+        <option>Flow-5</option>
+        <option>Flow-6</option>
+      </select>
       <input type="text" ngModel name="title" placeholder="title" class="top-holder__input input" />
       <textarea ngModel name="description" placeholder="description"
         class="top-holder__input top-holder__input--textarea input"></textarea>
       <div class="top-holder__actions-group top-holder__actions-group--bottom">
-        <button class="top-holder__button top-holder__button--cancel button button--secondary button--large" (click)="cancel()">
+        <button class="top-holder__button top-holder__button--cancel button button--secondary button--large"
+          (click)="cancel()">
           Cancel
         </button>
         <button type="submit" class="top-holder__button top-holder__button--save button button--primary button--large">
           Save changes
         </button>
-   
       </div>
     </form>
   </div>

@@ -1,0 +1,11 @@
+.flow{
+    &__top-holders{
+        display:flex;
+        box-shadow: 2px 2px 7px #a0a0a0;
+        width: inherit;
+        padding: 2rem;
+        box-sizing: border-box;
+        border-radius: 4px;
+        background-color: #897be6;
+    }
+}

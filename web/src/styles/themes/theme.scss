@@ -100,6 +100,11 @@
   @include size-variants(small, large);
 }
 
+.select{
+  @extend .input;
+  font-size: 1.6rem;
+}
+
 .fieldset{
   border: 1px map.get($color-pallete, 'grey') solid;
   border-radius: 4px;

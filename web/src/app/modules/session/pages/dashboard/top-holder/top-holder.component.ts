@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Store } from '@ngxs/store';
-import { faUpload, faPlug } from '@fortawesome/free-solid-svg-icons';
 import { AddPlugin } from '../../../actions/dashboard.actions';
 import { IPlugin } from 'src/app/data/models/plugin.model';
 
@@ -11,8 +10,6 @@ import { IPlugin } from 'src/app/data/models/plugin.model';
   styleUrls: ['./top-holder.component.scss']
 })
 export class TopHolderComponent implements OnInit {
-  public upload = faUpload;
-  public plug = faPlug;
   public creationMode = false;
 
   constructor(private store: Store) { }

@@ -5,13 +5,16 @@
                 <img src="../../../assets/img/steward.png" alt="steward logo" class="header__logo">
             </div>
             <app-nav class="header__nav">
-                <app-nav-item [icon]="plug" [link]="['/auth/sign-in']" class="header__nav-item">
+                <app-nav-item icon="plug" [link]="['/session/dashboard']" class="header__nav-item">
                     Dashboard
                 </app-nav-item>
-                <app-nav-item [icon]="cog" [link]="['/auth/sign-in']" class="header__nav-item">
+                <app-nav-item icon="project-diagram" [link]="['/session/flow']" class="header__nav-item">
+                    Flow
+                </app-nav-item>
+                <app-nav-item icon="cog" [link]="['/auth/sign-in']" class="header__nav-item">
                     Settings
                 </app-nav-item>
-                <app-nav-item [icon]="signOutAlt" [link]="['/auth/sign-in']" class="header__nav-item">
+                <app-nav-item icon="sign-out-alt" [link]="['/auth/sign-in']" class="header__nav-item">
                    Logout
                 </app-nav-item>
             </app-nav>

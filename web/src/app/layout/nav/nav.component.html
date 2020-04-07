@@ -1,26 +1,6 @@
 <nav class="nav">
-
-    <fa-icon class="nav__icon nav__icon--menu" [icon]="bars" (click)="toggleDropDown()"></fa-icon>
-
+    <fa-icon icon="bars" class="nav__icon nav__icon--menu" (click)="toggleDropDown()"></fa-icon>
     <ul class="nav__items" #navItems>
         <ng-content></ng-content>
-        <!-- <li class="nav__item">
-            <a class="nav__anchor" [routerLink]="['/auth/sign-in']" routerLinkActive="active">
-                <fa-icon class="nav__icon" [icon]="rocket"></fa-icon>
-                <span class="nav__text">Online Demo</span>
-            </a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__anchor" routerLink="/login" routerLinkActive="active">
-                <fa-icon class="nav__icon" [icon]="blog"></fa-icon>
-                <span class="nav__text">Blog</span>
-            </a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__anchor" routerLink="/registration" routerLinkActive="active">
-                <fa-icon class="nav__icon" [icon]="envelope"></fa-icon>
-                <span class="nav__text">Contact Us</span>
-            </a>
-        </li> -->
     </ul>
 </nav>

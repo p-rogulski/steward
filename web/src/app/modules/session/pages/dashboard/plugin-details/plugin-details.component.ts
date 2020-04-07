@@ -14,7 +14,7 @@ export class PluginDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((params) => {
       this.getDetails(Number(params.get('id')));
-    })
+    });
   }
 
   getDetails(id: number) {
