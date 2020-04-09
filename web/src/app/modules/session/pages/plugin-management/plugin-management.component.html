@@ -1,0 +1,9 @@
+<div class="plugin-management">
+    <app-dashoard-holder class="plugin-management__top-holder"></app-dashoard-holder>
+  <div class="plugin-management__plugins">
+    <app-plugin *ngFor="let plugin of plugins$ | async" id="{{plugin.id}}" title="{{plugin.title}}"
+      thumbnail="{{plugin.thumbnail}}" class="plugin-management__plugin">
+      {{plugin.description}}
+    </app-plugin>
+  </div>
+</div>

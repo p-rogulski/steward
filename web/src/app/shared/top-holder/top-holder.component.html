@@ -1,0 +1,17 @@
+<div class="top-holder">
+  <div class="top-holder__header">
+    <div class="top-holder__actions-group">
+      <button class="top-holder__button top-holder__button--create button button--success" (click)="toggleDrawer(!drawerIsOpen)">
+        <fa-icon class="top-holder__icon" icon="{{drawerIsOpen?'chevron-down':'chevron-up'}}"></fa-icon>
+        {{drawerButtonTitle}}
+      </button>
+      <ng-content select="[topActions]"></ng-content>
+    </div>
+    <div class="top-holder__top">
+      <ng-content select="[body]"></ng-content>
+    </div>
+  </div>
+  <div class="top-holder__drawer" *ngIf="drawerIsOpen">
+    <ng-content select="[drawer]"></ng-content>
+  </div>
+</div>

@@ -10,13 +10,13 @@
       
       &__container-center {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 1366px;
+        width: 1366px;
         margin: auto;
       }
   
       &__logo-container{
+        flex-grow: 1;
+        width:auto;
         overflow:hidden;
         max-height: 52px;
       }
@@ -29,10 +29,33 @@
         padding-right: 16px;
         border-radius: 4px;
       }
+
+      &__nav{
+        flex-grow: 11;
+      }
+
+      &__nav-group{
+        flex-grow: 6;
+        display: flex;
+        
+        &--left{
+          flex-grow: 10;
+          justify-content: flex-end;
+        }
+
+        &--right{
+          flex-grow: 2;
+          justify-content: flex-end;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        &__nav{
+          flex-grow: 4;
+        }
+      }
     }
 
- 
-  
     .content {
       padding: 6rem 2rem 2rem 2rem;
       margin: auto;

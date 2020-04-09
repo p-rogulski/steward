@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NgxEchartsModule } from 'ngx-echarts';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { FlowComponent } from './pages/flow/flow.component';
-import { PluginDetailsComponent } from './pages/dashboard/plugin-details/plugin-details.component';
+import { PluginManagementComponent } from './pages/plugin-management/plugin-management.component';
+import { FlowManagementComponent } from './pages/flow-management/flow-management.component';
+import { PluginDetailsComponent } from './pages/plugin-management/plugin-details/plugin-details.component';
 
 
 const routes: Routes = [{
@@ -12,12 +12,12 @@ const routes: Routes = [{
   pathMatch: 'full'
 },
 {
-  path: 'flow',
-  component: FlowComponent,
+  path: 'flow-management',
+  component: FlowManagementComponent,
 },
 {
-  path: 'dashboard',
-  component: DashboardComponent,
+  path: 'plugin-management',
+  component: PluginManagementComponent,
 },
 {
   path: 'plugin/:id',

@@ -23,11 +23,17 @@ import {
   faChevronDown,
   faTag,
   faThLarge,
-  faDownload
+  faDownload,
+  faStoreAlt,
+  faChevronUp
 } from '@fortawesome/free-solid-svg-icons';
 
+import { TopHolderComponent } from './top-holder/top-holder.component';
+import { TopHolderService } from './top-holder/top-holder.service';
+
 @NgModule({
-  declarations: [],
+  declarations: [TopHolderComponent],
+  providers: [TopHolderService],
   imports: [
     CommonModule,
     FontAwesomeModule,
@@ -35,6 +41,7 @@ import {
   exports: [
     CommonModule,
     FontAwesomeModule,
+    TopHolderComponent
   ]
 })
 
@@ -57,9 +64,11 @@ export class SharedModule {
       faLightbulb,
       faUpload,
       faChevronDown,
+      faChevronUp,
       faTag,
       faThLarge,
-      faDownload
+      faDownload,
+      faStoreAlt
     );
   }
 }

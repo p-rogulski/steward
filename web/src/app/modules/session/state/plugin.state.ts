@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { tap } from 'rxjs/operators';
-import { DashboardService } from '@data/service/dashboard.service';
+import { PluginService } from '@data/service/plugin.service';
 import { IPlugin } from '@data/models/plugin.model';
-import { GetPlugins, AddPlugin, RemovePlugin } from '../actions/dashboard.actions';
+import { GetPlugins, AddPlugin, RemovePlugin } from '../actions/plugin.actions';
 
-export interface IDashboardStateModel {
+export interface IPluginStateModel {
     plugins: Array<IPlugin>;
 }
 
-@State<IDashboardStateModel>({
+@State<IPluginStateModel>({
     name: 'plugins',
     defaults: {
         plugins: []
@@ -17,22 +17,22 @@ export interface IDashboardStateModel {
 })
 
 @Injectable()
-export class DashboardState {
+export class PluginState {
 
-    constructor(private dashboardService: DashboardService) { }
+    constructor(private pluginService: PluginService) { }
 
     @Selector()
-    static plugins(state: IDashboardStateModel) {
+    static plugins(state: IPluginStateModel) {
         return state.plugins;
     }
 
     @Action(GetPlugins)
-    getAll({ patchState }: StateContext<IDashboardStateModel>) {
-        return this.dashboardService.getPlugins().pipe(tap((plugins) => patchState({ plugins })));
+    getAll({ patchState }: StateContext<IPluginStateModel>) {
+        return this.pluginService.getPlugins().pipe(tap((plugins) => patchState({ plugins })));
     }
 
     @Action(AddPlugin)
-    add({ getState, patchState }: StateContext<IDashboardStateModel>, { payload }: AddPlugin) {
+    add({ getState, patchState }: StateContext<IPluginStateModel>, { payload }: AddPlugin) {
         const state = getState();
         patchState({
             plugins: [...state.plugins, payload]
@@ -40,7 +40,7 @@ export class DashboardState {
     }
 
     @Action(AddPlugin)
-    remove({ getState, patchState }: StateContext<IDashboardStateModel>, { payload }: RemovePlugin) {
+    remove({ getState, patchState }: StateContext<IPluginStateModel>, { payload }: RemovePlugin) {
         patchState({
             plugins: getState().plugins.filter((plugin: IPlugin) => plugin.id !== payload)
         });

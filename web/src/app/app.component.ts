@@ -5,11 +5,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  @Input() logoUrl: string='';
+  @Input() logoUrl = '';
   title = 'steward';
-  
-  ngOnInit(){
-    this.logoUrl='assets/img/keeper.png';
+
+  ngOnInit() {
+    this.logoUrl = 'assets/img/keeper.png';
   }
 
 }

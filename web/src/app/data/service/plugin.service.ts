@@ -6,15 +6,15 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class DashboardService {
+export class PluginService {
 
-  constructor(private api:FakeApiService) { }
+  constructor(private api: FakeApiService) { }
 
-  getPlugins():Observable<any>{
+  getPlugins(): Observable<any> {
     return this.api.get('/plugins');
   }
 
-  getPluginDetails(id:number):Observable<any>{
+  getPluginDetails(id: number): Observable<any> {
     return this.api.get(`/plugin/${id}`);
   }
 

@@ -15,7 +15,7 @@ export class SignInComponent implements OnInit {
   public signIn(event: Event): void {
     event.preventDefault();
     console.log('test');
-    this.router.navigateByUrl('/session/dashboard');
+    this.router.navigateByUrl('/session/plugin-management');
   }
 
 }

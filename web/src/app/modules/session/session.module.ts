@@ -6,27 +6,29 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { SharedModule } from '@shared/shared.module';
 import { SessionRoutingModule } from './session-routing.module';
-import { DashboardState } from './state/dashboard.state';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { PluginComponent } from './pages/dashboard/plugin/plugin.component';
-import { PluginDetailsComponent } from './pages/dashboard/plugin-details/plugin-details.component';
-import { ChartComponent } from './pages/dashboard/plugin-details/chart/chart.component';
-import { TopHolderComponent } from './pages/dashboard/top-holder/top-holder.component';
-import { FlowComponent } from './pages/flow/flow.component';
+import { PluginState } from './state/plugin.state';
+import { PluginManagementComponent } from './pages/plugin-management/plugin-management.component';
+import { PluginComponent } from './pages/plugin-management/plugin/plugin.component';
+import { PluginDetailsComponent } from './pages/plugin-management/plugin-details/plugin-details.component';
+import { ChartComponent } from './pages/plugin-management/plugin-details/chart/chart.component';
+import { PluginsHolderComponent} from './pages/plugin-management/top-holder/plugins-holder.component';
+import { FlowHolderComponent  } from './pages/flow-management/top-holder/flow-holder.component';
+import { FlowManagementComponent } from './pages/flow-management/flow-management.component';
 
 @NgModule({
   declarations: [
     PluginComponent,
     PluginDetailsComponent,
-    DashboardComponent,
+    PluginManagementComponent,
     ChartComponent,
-    TopHolderComponent,
-    FlowComponent
+    PluginsHolderComponent,
+    FlowHolderComponent,
+    FlowManagementComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    NgxsModule.forRoot([DashboardState]),
+    NgxsModule.forRoot([PluginState]),
     NgxEchartsModule,
     SharedModule,
     SessionRoutingModule,

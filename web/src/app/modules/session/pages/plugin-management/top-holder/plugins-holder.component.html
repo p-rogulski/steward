@@ -1,0 +1,55 @@
+<app-top-holder drawerButtonTitle="Create plugin" class="plugins-holder">
+  <div topActions>
+
+    <button class="plugins-holder__button plugins-holder__button--manage button button--secondary button--small">
+      <fa-icon class="plugins-holder__icon" icon="th-large"></fa-icon>
+      Change order
+    </button>
+    <button class="plugins-holder__button plugins-holder__button--manage button button--secondary button--small">
+      <fa-icon class="plugins-holder__icon" icon="tag"></fa-icon>
+      Group by
+    </button>
+  </div>
+
+  <div body>
+    <input class="plugins-holder__input input input--large" placeholder="search" />
+  </div>
+
+  <div drawer>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate class="plugins-holder__form">
+      <button class="plugins-holder__button plugins-holder__button--upload button button--upload button--large">
+        <fa-icon class="plugins-holder__icon" icon="upload"></fa-icon> Upload plugin
+      </button>
+      <progress id="file" class="plugins-holder__progress" value="32" max="100"> 32% </progress> 30%
+      <div class="plugins-holder__plug-container">
+        <div class="plugins-holder__plug-avatar">
+          <fa-icon class="plugins-holder__icon plugins-holder__icon--plug" icon="plug"></fa-icon>
+        </div>
+        <button class="plugins-holder__button plugins-holder__button--avatar button button--secondary button--small">
+          Set avatar
+        </button>
+      </div>
+      <select class="plugins-holder__select select">
+        <option value="" disabled selected class="option">Assign to flow</option>
+        <option>Flow-1</option>
+        <option>Flow-2</option>
+        <option>Flow-3</option>
+        <option>Flow-4</option>
+        <option>Flow-5</option>
+        <option>Flow-6</option>
+      </select>
+      <input type="text" ngModel name="title" placeholder="title" class="plugins-holder__input input" />
+      <textarea ngModel name="description" placeholder="description"
+        class="plugins-holder__input plugins-holder__input--textarea input"></textarea>
+      <div class="plugins-holder__actions-group plugins-holder__actions-group--bottom">
+        <button class="plugins-holder__button plugins-holder__button--cancel button button--secondary button--large"
+          (click)="cancel()">
+          Cancel
+        </button>
+        <button type="submit" class="plugins-holder__button plugins-holder__button--save button button--primary button--large">
+          Save changes
+        </button>
+      </div>
+    </form>
+  </div>
+</app-top-holder>

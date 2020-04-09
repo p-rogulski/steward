@@ -2,24 +2,7 @@
   position: sticky;
   position: -webkit-sticky;
   top: 52px;
-  &__header {
-    
-    box-shadow: 2px 2px 7px #a0a0a0;
-    width: inherit;
-    padding: 2rem;
-    box-sizing: border-box;
-    border-radius: 4px;
-    background-color: #897be6;
-  }
-
-  &__actions-group {
-
-    width:100%;
-    margin-bottom: 10px;
-    &--bottom{
-      text-align: right;
-    }
-  }
+ 
 
   &__button {
     margin-left: 10px;

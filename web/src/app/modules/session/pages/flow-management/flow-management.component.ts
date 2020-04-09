@@ -3,11 +3,11 @@ import {  } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-flow',
-  templateUrl: './flow.component.html',
-  styleUrls: ['./flow.component.scss']
+  templateUrl: './flow-management.component.html',
+  styleUrls: ['./flow-management.component.scss']
 })
 
-export class FlowComponent implements OnInit {
+export class FlowManagementComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {}

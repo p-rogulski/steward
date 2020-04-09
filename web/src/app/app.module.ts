@@ -10,6 +10,7 @@ import { NavComponent } from '@layout/nav/nav.component';
 import { AuthLayoutComponent } from '@layout/auth-layout/auth-layout.component';
 import { SessionLayoutComponent } from '@layout/session-layout/session-layout.component';
 import { NavItemComponent } from '@layout/nav/nav-item/nav-item.component';
+import { NavGroupComponent } from './layout/nav/nav-group/nav-group.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NavItemComponent } from '@layout/nav/nav-item/nav-item.component';
     AuthLayoutComponent,
     SessionLayoutComponent,
     NavItemComponent,
+    NavGroupComponent,
   ],
   imports: [
     BrowserModule,
