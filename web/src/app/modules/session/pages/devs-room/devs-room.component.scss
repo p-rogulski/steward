@@ -1,0 +1,9 @@
+.devs-room{
+
+    &__profiles{
+        margin-top:50px;
+        display:flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+}

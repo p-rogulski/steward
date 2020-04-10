@@ -1,0 +1,23 @@
+.dev-profile{
+    display: flex;
+    margin-top:10px;
+    align-items: center;
+    justify-content: center;
+    min-width:220px;
+    border:1px #f4f4f4 solid;
+    padding:4rem;
+    box-sizing: border-box;
+    background-color: #cccccc2e;
+    border-radius: 4px;
+    &__avatar{
+        border: 1px #cccccc solid;
+        width:50px;
+        height:50px;
+        border-radius: 80px;
+    }
+
+    &__name{
+        margin-left:10px;
+    }
+  
+}

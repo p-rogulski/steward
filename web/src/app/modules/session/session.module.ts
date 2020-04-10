@@ -13,7 +13,14 @@ import { PluginDetailsComponent } from './pages/plugin-management/plugin-details
 import { ChartComponent } from './pages/plugin-management/plugin-details/chart/chart.component';
 import { PluginsHolderComponent} from './pages/plugin-management/top-holder/plugins-holder.component';
 import { FlowHolderComponent  } from './pages/flow-management/top-holder/flow-holder.component';
+import { MarketHolderComponent  } from './pages/source-market/top-holder/market-holder.component';
+import { DevHolderComponent} from './pages/devs-room/top-holder/dev-holder.component';
 import { FlowManagementComponent } from './pages/flow-management/flow-management.component';
+import { FlowComponent } from './pages/flow-management/flow/flow.component';
+import { FlowDetailsComponent } from './pages/flow-management/flow-details/flow-details.component';
+import { SourceMarketComponent } from './pages/source-market/source-market.component';
+import { DevsRoomComponent } from './pages/devs-room/devs-room.component';
+import { DevProfileComponent } from './pages/devs-room/dev-profile/dev-profile.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +30,14 @@ import { FlowManagementComponent } from './pages/flow-management/flow-management
     ChartComponent,
     PluginsHolderComponent,
     FlowHolderComponent,
-    FlowManagementComponent
+    MarketHolderComponent,
+    DevHolderComponent,
+    FlowManagementComponent,
+    FlowComponent,
+    FlowDetailsComponent,
+    SourceMarketComponent,
+    DevsRoomComponent,
+    DevProfileComponent
   ],
   imports: [
     CommonModule,

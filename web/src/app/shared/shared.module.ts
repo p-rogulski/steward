@@ -25,7 +25,8 @@ import {
   faThLarge,
   faDownload,
   faStoreAlt,
-  faChevronUp
+  faChevronUp,
+  faCode
 } from '@fortawesome/free-solid-svg-icons';
 
 import { TopHolderComponent } from './top-holder/top-holder.component';
@@ -68,7 +69,8 @@ export class SharedModule {
       faTag,
       faThLarge,
       faDownload,
-      faStoreAlt
+      faStoreAlt,
+      faCode
     );
   }
 }
