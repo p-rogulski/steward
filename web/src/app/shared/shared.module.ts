@@ -29,6 +29,7 @@ import {
   faCode,
   faUserAlt,
   faCaretDown,
+  faQuestionCircle
 } from '@fortawesome/free-solid-svg-icons';
 
 import { TopHolderComponent } from './top-holder/top-holder.component';
@@ -83,6 +84,7 @@ export class SharedModule {
       faCode,
       faUserAlt,
       faCaretDown,
+      faQuestionCircle
     );
   }
 }

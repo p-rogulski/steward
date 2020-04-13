@@ -12,7 +12,7 @@ export class CardComponent implements OnInit, AfterViewInit {
   @Input() icon: string;
   @Input() title: string;
   @ViewChild('cardHeader') header: ElementRef;
- 
+
 
   constructor(private renderer: Renderer2) { }
 

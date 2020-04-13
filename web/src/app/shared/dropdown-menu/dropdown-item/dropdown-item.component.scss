@@ -3,9 +3,26 @@
     padding:1.2rem;
     font-size:1.2rem;
     cursor: pointer;
+    color:#585858;
     &:hover{
-        background-color: #cccccc;
+        background-color: #f3f3f3;
     }
+
+    &--section{
+        padding:2rem;
+        display:flex;
+        align-items: center;
+        border-bottom: 1px #e0e0e0 solid;
+        background-color:#f3f3f3;
+        &:hover{
+            background-color:#f3f3f3;;
+        }
+    }
+
+    &--separated{
+        border-top: 1px #e0e0e0 solid;
+    }
+
     &__icon{
         margin-right: 10px;
     }

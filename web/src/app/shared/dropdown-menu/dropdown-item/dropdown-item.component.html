@@ -1,4 +1,4 @@
-<li class="dropdown-item">
+<li class="dropdown-item" [ngClass]="{'dropdown-item--section':isSection,'dropdown-item--separated':isSeparated }">
     <fa-icon [icon]="icon" class="dropdown-item__icon"></fa-icon>
     <ng-content></ng-content>
 </li>

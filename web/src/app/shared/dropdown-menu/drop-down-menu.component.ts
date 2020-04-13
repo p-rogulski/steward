@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener, ElementRef } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DropdownMenuService } from './dropdown-menu.service';
 
@@ -11,7 +11,7 @@ import { DropdownMenuService } from './dropdown-menu.service';
 export class DropDownMenuComponent implements OnInit, OnDestroy {
   toggleMenusubscription: Subscription ;
   isMenuOpen: boolean;
-  constructor(private dropdownMenuService: DropdownMenuService) {}
+  constructor(private dropdownMenuService: DropdownMenuService, private elementRef: ElementRef) {}
 
   ngOnInit() {
     this.isMenuOpen = this.dropdownMenuService.IsMenuOpen;
@@ -22,6 +22,17 @@ export class DropDownMenuComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.toggleMenusubscription.unsubscribe();
+  }
+
+  @HostListener('document:click', ['$event'])
+  clickout(event: Event) {
+    const nativeElement = this.elementRef.nativeElement;
+    // You can close it only out of the parent element
+    const isDropDownEvent =  nativeElement.parentElement.contains(event.target);
+
+    if (!isDropDownEvent) {
+      this.dropdownMenuService.closeMenu();
+    }
   }
 
   toggleMenu(event: Event): void {

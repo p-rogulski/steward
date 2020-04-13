@@ -17,7 +17,7 @@ export class SessionLayoutComponent implements OnInit {
     this.dropdownMenuService.IsMenuOpen ? this.dropdownMenuService.closeMenu() : this.dropdownMenuService.openMenu();
   }
 
-  logout(){
+  logout() {
     this.router.navigateByUrl('/auth/sign-in');
   }
 

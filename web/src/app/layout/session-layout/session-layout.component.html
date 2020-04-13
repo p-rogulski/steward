@@ -30,10 +30,17 @@
             </app-nav>
             <app-avatar class="header__avatar" (click)="handleAvatarClick($event)">
                 <app-dropdown-menu class="header__dropdown-menu">
+                    <app-dropdown-item section class="header__dropdown-menu-item">
+                        <app-avatar class="header__avatar" (click)="handleAvatarClick($event)"></app-avatar>
+                        <b class="header__user-name">John Doe</b>
+                    </app-dropdown-item>
+                    <app-dropdown-item icon="question-circle" class="header__dropdown-menu-item">
+                        Help
+                    </app-dropdown-item>
                     <app-dropdown-item icon="cog" class="header__dropdown-menu-item">
                         Settings
                     </app-dropdown-item>
-                    <app-dropdown-item icon="sign-out-alt" class="header__dropdown-menu-item" (click)="logout()">
+                    <app-dropdown-item separated icon="sign-out-alt" class="header__dropdown-menu-item" (click)="logout()">
                         Logout
                     </app-dropdown-item>
                 </app-dropdown-menu>
