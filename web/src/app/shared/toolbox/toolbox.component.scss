@@ -1,0 +1,14 @@
+
+.toolbox{
+    position: sticky;
+    position: -webkit-sticky;
+    display:flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem;
+    background-color: #cccccc2e;
+    border-radius:4px;
+    border: 1px #f4f4f4 solid;
+    box-shadow: 0px 0px 2px #888888;
+}

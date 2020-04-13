@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PluginService } from '@app/data/service/plugin.service';
 
 
@@ -14,7 +14,9 @@ export class PluginDetailsComponent implements OnInit, OnDestroy {
   pluginDetails: any;
   paramMapSubscription: Subscription;
 
-  constructor(private pluginService: PluginService, private activatedRoute: ActivatedRoute) { }
+  constructor(private pluginService: PluginService, private activatedRoute: ActivatedRoute,
+              private router: Router
+    ) { }
 
   ngOnInit() {
     this.paramMapSubscription = this.activatedRoute.paramMap.subscribe((params) => {
@@ -30,6 +32,10 @@ export class PluginDetailsComponent implements OnInit, OnDestroy {
     this.pluginService.getPluginDetails(id).subscribe((pluginDetails) => {
       this.pluginDetails = pluginDetails;
     });
+  }
+
+  backToPlugins() {
+    this.router.navigateByUrl('/session/plugin-management');
   }
 
 }

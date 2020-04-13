@@ -29,7 +29,10 @@ import {
   faCode,
   faUserAlt,
   faCaretDown,
-  faQuestionCircle
+  faQuestionCircle,
+  faArrowCircleLeft,
+  faPause,
+  faFilePdf,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { TopHolderComponent } from './top-holder/top-holder.component';
@@ -41,7 +44,12 @@ import { ToolboxComponent } from './toolbox/toolbox.component';
 import { DropdownItemComponent } from './dropdown-menu/dropdown-item/dropdown-item.component';
 
 @NgModule({
-  declarations: [TopHolderComponent, AvatarComponent, DropDownMenuComponent, ToolboxComponent, DropdownItemComponent],
+  declarations: [TopHolderComponent,
+    AvatarComponent,
+    DropDownMenuComponent,
+    ToolboxComponent,
+    DropdownItemComponent,
+  ],
   providers: [TopHolderService, DropdownMenuService],
   imports: [
     CommonModule,
@@ -53,6 +61,7 @@ import { DropdownItemComponent } from './dropdown-menu/dropdown-item/dropdown-it
     TopHolderComponent,
     AvatarComponent,
     DropDownMenuComponent,
+    ToolboxComponent,
     DropdownItemComponent
   ]
 })
@@ -84,7 +93,10 @@ export class SharedModule {
       faCode,
       faUserAlt,
       faCaretDown,
-      faQuestionCircle
+      faQuestionCircle,
+      faArrowCircleLeft,
+      faPause,
+      faFilePdf,
     );
   }
 }

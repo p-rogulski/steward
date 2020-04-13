@@ -1,8 +1,28 @@
-<a class="nav__anchor" [routerLink]="['/session/plugins']" routerLinkActive="active">
- &lt;&lt; Back to plugins
-</a>
+
 <div class="plugin-details">
- 
+  <div  class="plugin-details__top">
+    <app-toolbox class="plugin-details__toolbox">
+      <div class="plugin-details__field-group plugin-details__field-group--top field-group">
+        <button class="plugin-details__toolbox-item button button--small button--secondary" (click)="backToPlugins()">
+          <fa-icon icon="arrow-circle-left" [ngStyle]="{'color':'rgb(107, 107, 107)'}"></fa-icon>
+        </button>
+        <button class="plugin-details__toolbox-item  button button--small button--secondary">
+          <fa-icon icon="pause" [ngStyle]="{'color':'red'}"></fa-icon>
+        </button>
+        <button class="plugin-details__toolbox-item  button button--small button--secondary">
+          <fa-icon icon="project-diagram" [ngStyle]="{'color':'#7a66ff'}"></fa-icon>
+        </button>
+        <button class="plugin-details__toolbox-item  button button--small button--secondary">
+          <fa-icon icon="file-pdf" [ngStyle]="{'color':'#6ddc04'}"></fa-icon>
+        </button>
+
+        
+      </div>
+      <button type="submit" class="plugin-details__button--delete button button--danger">
+        Delete plugin
+      </button>
+    </app-toolbox>
+  </div>
   <div class="plugin-details__section plugin-details__section--left">
 
     <h1 class="title title--large">
@@ -22,9 +42,7 @@
       <textarea [(ngModel)]="pluginDetails.description" name="description"
         class="plugin-details__input plugin-details__input--textarea input"></textarea>
       <div class="plugin-details__actions">
-        <button type="submit" class="plugin-details__button--delete button button--danger">
-          Delete plugin
-        </button>
+      
         <button type="submit" class="plugin-details__button--save-changes button button--primary">
           Save changes
         </button>

@@ -1,7 +1,19 @@
 .plugin-details{
     display:flex;
     flex-flow: row wrap;
-   
+    &__top{
+        width:100%;
+        position: sticky;
+        position: -webkit-sticky;
+        top:57px;
+        background-color: #ffffff;
+    }
+
+    &__toolbox{
+    
+        background-color:#000;
+    }
+
     &__avatar-container{
         display:flex;
         flex-flow: column;
@@ -27,6 +39,16 @@
 
     &__field-group{
         justify-content: space-between;
+
+        &--top{
+            display: flex
+        }
+    }
+
+    &__toolbox-item{
+        font-size: 2rem;
+        margin-right: 10px;
+        min-width: 50px;
     }
 
     &__section{
