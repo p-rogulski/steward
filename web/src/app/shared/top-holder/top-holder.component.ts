@@ -17,10 +17,10 @@ export class TopHolderComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
-  toggleDrawer(isOpen: boolean) {
+  toggleDrawer(isOpen: boolean): void {
     this.drawerIsOpen = isOpen;
   }
 }

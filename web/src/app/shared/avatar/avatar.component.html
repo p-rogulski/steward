@@ -1,0 +1,7 @@
+<div class="avatar">
+    <div class="avatar__img-container"  #avatar>
+        <img *ngIf="imgSrc" [src]="imgSrc" class="avatar__img"/>
+        <fa-icon *ngIf="!imgSrc" icon="user-alt" class="avatar__icon-alt"></fa-icon>
+    </div>
+    <ng-content></ng-content>
+</div>

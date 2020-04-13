@@ -1,0 +1,6 @@
+<nav class="dropdown-menu">
+    <fa-icon icon="caret-down" (click)="toggleMenu($event)" class="dropdown-menu__holder"></fa-icon>
+    <ul class="dropdown-menu__list" *ngIf="isMenuOpen">
+      <ng-content></ng-content>
+    </ul>
+</nav>

@@ -26,15 +26,22 @@ import {
   faDownload,
   faStoreAlt,
   faChevronUp,
-  faCode
+  faCode,
+  faUserAlt,
+  faCaretDown,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { TopHolderComponent } from './top-holder/top-holder.component';
 import { TopHolderService } from './top-holder/top-holder.service';
+import { DropdownMenuService } from './dropdown-menu/dropdown-menu.service';
+import { AvatarComponent } from './avatar/avatar.component';
+import { DropDownMenuComponent } from './dropdown-menu/drop-down-menu.component';
+import { ToolboxComponent } from './toolbox/toolbox.component';
+import { DropdownItemComponent } from './dropdown-menu/dropdown-item/dropdown-item.component';
 
 @NgModule({
-  declarations: [TopHolderComponent],
-  providers: [TopHolderService],
+  declarations: [TopHolderComponent, AvatarComponent, DropDownMenuComponent, ToolboxComponent, DropdownItemComponent],
+  providers: [TopHolderService, DropdownMenuService],
   imports: [
     CommonModule,
     FontAwesomeModule,
@@ -42,7 +49,10 @@ import { TopHolderService } from './top-holder/top-holder.service';
   exports: [
     CommonModule,
     FontAwesomeModule,
-    TopHolderComponent
+    TopHolderComponent,
+    AvatarComponent,
+    DropDownMenuComponent,
+    DropdownItemComponent
   ]
 })
 
@@ -70,7 +80,9 @@ export class SharedModule {
       faThLarge,
       faDownload,
       faStoreAlt,
-      faCode
+      faCode,
+      faUserAlt,
+      faCaretDown,
     );
   }
 }

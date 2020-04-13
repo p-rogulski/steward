@@ -20,14 +20,25 @@
                     </app-nav-item>
                 </app-nav-group>
                 <app-nav-group class="header__nav-group header__nav-group--right">
-                    <app-nav-item icon="cog" [link]="['/auth/sign-in']" class="header__nav-item">
+                    <app-nav-item icon="cog" (click)="logout()" class="header__nav-item">
                         Settings
                     </app-nav-item>
-                    <app-nav-item icon="sign-out-alt" [link]="['/auth/sign-in']" class="header__nav-item">
+                    <app-nav-item icon="sign-out-alt" (click)="logout()" class="header__nav-item">
                         Logout
                     </app-nav-item>
                 </app-nav-group>
             </app-nav>
+            <app-avatar class="header__avatar" (click)="handleAvatarClick($event)">
+                <app-dropdown-menu class="header__dropdown-menu">
+                    <app-dropdown-item icon="cog" class="header__dropdown-menu-item">
+                        Settings
+                    </app-dropdown-item>
+                    <app-dropdown-item icon="sign-out-alt" class="header__dropdown-menu-item" (click)="logout()">
+                        Logout
+                    </app-dropdown-item>
+                </app-dropdown-menu>
+            </app-avatar>
+            <!-- <app-avatar></app-avatar> -->
         </div>
         <div class="header__sub-area"></div>
     </div>

@@ -1,0 +1,22 @@
+.avatar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  cursor: pointer;
+
+  &__img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #ffffff;
+    border: 1px #ffffff solid;
+  }
+
+  &__icon-alt {
+    font-size: 2rem;
+    color: #cccccc;
+  }
+}

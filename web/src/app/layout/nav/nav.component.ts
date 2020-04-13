@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -6,21 +6,20 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 
-export class NavComponent implements AfterViewInit {
+export class NavComponent {
   @ViewChild('navItems') topnavItems: ElementRef;
+
+  constructor(private renderer: Renderer2) {}
 
   toggleDropDown() {
     const menuItemsElement: HTMLElement = this.topnavItems.nativeElement;
+
     const menuIsOpen: boolean = menuItemsElement.classList.contains('nav__items--open');
 
     if (menuIsOpen) {
-      menuItemsElement.classList.remove('nav__items--open');
+      this.renderer.removeClass(menuItemsElement, 'nav__items--open');
     } else {
-      menuItemsElement.classList.add('nav__items--open');
+      this.renderer.addClass(menuItemsElement, 'nav__items--open');
     }
-  }
-
-  ngAfterViewInit() {
-    console.log(this.topnavItems.nativeElement);
   }
 }

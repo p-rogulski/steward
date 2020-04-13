@@ -1,0 +1,12 @@
+.dropdown-item{
+    display:flex;
+    padding:1.2rem;
+    font-size:1.2rem;
+    cursor: pointer;
+    &:hover{
+        background-color: #cccccc;
+    }
+    &__icon{
+        margin-right: 10px;
+    }
+}
