@@ -2,7 +2,7 @@
 @use "sass:map";
 @import './main-theme';
 
-@mixin color-variants($args...) {
+@mixin button-color-variants($args...) {
   @each $name in $args {
     $color: map.get($color-pallete, $name);
 
@@ -30,7 +30,25 @@
   }
 }
 
+@mixin border-color-variants($args...) {
+  @each $name in $args {
+    $color: map.get($color-pallete, $name);
 
+    &--#{$name} {
+     border-color: $color;
+    }
+  }
+}
+
+@mixin text-color-variants($args...) {
+  @each $name in $args {
+    $color: map.get($color-pallete, $name);
+
+    &--#{$name} {
+     color: $color;
+    }
+  }
+}
 
 @mixin size-variants($args...) {
   @each $name in $args {
@@ -85,7 +103,7 @@
   color: #fff;
 
   font-size: 1.2rem;
-  @include color-variants(primary, secondary, success, upload, danger, transparency);
+  @include button-color-variants(primary, secondary, success, upload, danger, transparency);
   @include size-variants(small, large);
 }
 
@@ -98,7 +116,10 @@
   outline: none;
   padding: map.get($size-variants, 'regular');
   @include size-variants(small, large);
+  @include border-color-variants(error);
 }
+
+
 
 .select{
   @extend .input;
@@ -120,6 +141,7 @@
 
 .text{
   @include font-size-variants(small, regular ,large);
+  @include text-color-variants(error);
 }
 
 .label{

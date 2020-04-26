@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxEchartsModule } from 'ngx-echarts';
@@ -42,6 +42,7 @@ import { DevProfileComponent } from './pages/devs-room/dev-profile/dev-profile.c
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     NgxsModule.forRoot([PluginState]),
     NgxEchartsModule,
     SharedModule,

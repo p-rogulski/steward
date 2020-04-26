@@ -11,7 +11,7 @@
     background-color: #360099;
     border-radius: 8px;
 
-    &__icon {
+    &__logo {
       display: block;
       margin: 0 auto;
       width: 220px;
@@ -33,14 +33,7 @@
     }
 
     &__input {
-      font-size: 1.6rem;
-      margin-top: 5px;
-      border-radius: 4px;
-      line-height: 24px;
-      border: 1px #999999 solid;
       box-sizing: border-box;
-      width: 100%;
-      padding: 12px;
     }
 
     &__button{

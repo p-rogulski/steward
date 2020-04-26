@@ -1,18 +1,28 @@
 <div class="sign-in">
-  <form class="sign-in__form"  (ngSubmit)="signIn($event)">
+  <form [formGroup]="loginForm" (ngSubmit)="signIn()" class="sign-in__form">
     <div class="sign-in__form-group">
       <label class="sign-in__label">
         login:
-        <input type="text" class="sign-in__input" />
+        <input type="text" formControlName="login" class="sign-in__input input input--large" [ngClass]="{'input--error': submitted && loginControl.errors}"/>
+        <ng-container *ngIf="submitted && loginControl.errors">
+          <div *ngIf="submitted && loginControl.errors.required" class="sign-in__validation-error text text--error">
+            *Login is required
+          </div>
+        </ng-container>
       </label>
       <label class="sign-in__label">
         password:
-        <input type="password" class="sign-in__input" />
+        <input type="password" formControlName="password" class="sign-in__input input input--large" [ngClass]="{'input--error': submitted && passwordControl.errors}"/>
+        <ng-container *ngIf="submitted && passwordControl.errors">
+          <div *ngIf="submitted && passwordControl.errors.required" class="sign-in__validation-error text text--error">
+            *Password is required
+          </div>
+        </ng-container>
       </label>
     </div>
     <button type="submit" class="sign-in__button button button--primary button--large">
-     Sign in
+      Sign in
     </button>
   </form>
-    <a routerLink="/auth/sign-up" class="sign-in__link">By this link you can create your demo account</a>
+  <a routerLink="/auth/sign-up" class="sign-in__link">By this link you can create your demo account</a>
 </div>
